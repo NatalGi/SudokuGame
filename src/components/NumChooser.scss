@@ -1,0 +1,32 @@
+@import 'variables';
+@import 'mixins';
+
+.NumChooser {
+	position: absolute;
+	display: none;
+	flex-wrap: wrap;
+	background-color: $mainColor;
+	width: ($tileSize * 3) + 2px;
+	border: 1px solid $mainColor;
+
+	button {
+		padding: 0;
+		margin: 0;
+		width: $tileSize;
+		height: $tileSize;
+		color: white;
+		border-color: white;
+
+		&:hover {
+			color: $mainColor;
+			background-color: white;
+		}
+	}
+}
+
+.show {
+	display: flex;
+}
+
+@include xOffset();
+@include yOffset();

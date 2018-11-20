@@ -1,0 +1,17 @@
+@import 'variables';
+
+@mixin xOffset() {
+	@for $i from 1 through 9 {
+		.xOffset#{$i} {
+			left: $tileSize * $i;
+		}
+	}
+}
+
+@mixin yOffset() {
+	@for $i from 1 through 9 {
+		.yOffset#{$i} {
+			top: $tileSize * $i;
+		}
+	}
+}

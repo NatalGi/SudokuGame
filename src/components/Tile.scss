@@ -1,0 +1,53 @@
+@import 'variables';
+
+.Tile {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #ccc;
+	width: $tileSize;
+	height: $tileSize;
+	color: $mainColor;
+	font-weight: 700;
+
+	&:hover:not(.lock) {
+		cursor: pointer;
+		background-color: $mainColor;
+		color: white;
+	}
+}
+
+.active:not(.lock) {
+	cursor: pointer;
+	background-color: $mainColor;
+	color: white;
+}
+
+.lock {
+	color: black;
+	font-weight: 400;
+}
+
+.wrong:not(.lock) {
+	color: red;
+}
+
+.good:not(.lock) {
+	color: green;
+}
+
+.rightBorder {
+	border-right: 1px solid #555;
+}
+
+.leftBorder {
+	border-left: 1px solid #555;
+}
+
+.topBorder {
+	border-top: 1px solid #555;
+}
+
+.bottomBorder {
+	border-bottom: 1px solid #555;
+}

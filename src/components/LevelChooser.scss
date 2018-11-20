@@ -1,0 +1,19 @@
+@import 'variables';
+
+.LevelChooser {
+	position: absolute;
+	right: -30px;
+	top: 0;
+}
+
+.square {
+	width: 16px;
+	height: 16px;
+	border: 1px solid $mainColor;
+	margin-bottom: 5px;
+	cursor: pointer;
+}
+
+.fill {
+	background-color: $mainColor;
+}

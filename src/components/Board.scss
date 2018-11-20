@@ -1,0 +1,9 @@
+@import 'variables';
+
+.Board {
+	position: relative;
+	display: inline-flex;
+	flex-wrap: wrap;
+	width: $boardSize;
+	border: 1px solid #555;
+}
