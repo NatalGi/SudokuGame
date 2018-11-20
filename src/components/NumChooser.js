@@ -31,15 +31,15 @@ const NumChooser = props => {
 
 	return (
 		<div className={classes}>
-			<button onClick={() => props.numChooseHandler(event, 1)}>1</button>
-			<button onClick={() => props.numChooseHandler(event, 2)}>2</button>
-			<button onClick={() => props.numChooseHandler(event, 3)}>3</button>
-			<button onClick={() => props.numChooseHandler(event, 4)}>4</button>
-			<button onClick={() => props.numChooseHandler(event, 5)}>5</button>
-			<button onClick={() => props.numChooseHandler(event, 6)}>6</button>
-			<button onClick={() => props.numChooseHandler(event, 7)}>7</button>
-			<button onClick={() => props.numChooseHandler(event, 8)}>8</button>
-			<button onClick={() => props.numChooseHandler(event, 9)}>9</button>
+			<button onClick={event => props.numChooseHandler(event, 1)}>1</button>
+			<button onClick={event => props.numChooseHandler(event, 2)}>2</button>
+			<button onClick={event => props.numChooseHandler(event, 3)}>3</button>
+			<button onClick={event => props.numChooseHandler(event, 4)}>4</button>
+			<button onClick={event => props.numChooseHandler(event, 5)}>5</button>
+			<button onClick={event => props.numChooseHandler(event, 6)}>6</button>
+			<button onClick={event => props.numChooseHandler(event, 7)}>7</button>
+			<button onClick={event => props.numChooseHandler(event, 8)}>8</button>
+			<button onClick={event => props.numChooseHandler(event, 9)}>9</button>
 		</div>
 	);
 };

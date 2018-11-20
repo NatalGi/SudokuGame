@@ -37,6 +37,7 @@ class App extends React.Component {
 		this.restartGame = this.restartGame.bind(this);
 		this.solveGame = this.solveGame.bind(this);
 		this.tileClickHandler = this.tileClickHandler.bind(this);
+		this.emptyClickHandler = this.emptyClickHandler.bind(this);
 		this.numChooseHandler = this.numChooseHandler.bind(this);
 	}
 
@@ -124,6 +125,15 @@ class App extends React.Component {
 		}
 	}
 
+	emptyClickHandler(event) {
+		event.stopPropagation();
+		this.setState({
+			numChooser: {
+				display: false
+			}
+		});
+	}
+
 	numChooseHandler(event, num) {
 		event.stopPropagation();
 		const newSudokuString = this.state.sudokuString.substring(0, this.state.numChooser.activeTileId) 
@@ -141,7 +151,7 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<div className={style.App}>
+			<div className={style.App} onClick={event => this.emptyClickHandler(event)}>
 				<h1>Sudoku</h1>
 				<div className={style.Board}>
 					<h4>level: {difficultyLevel[this.state.gameLevel]}</h4>

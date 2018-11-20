@@ -19,7 +19,7 @@ const Tile = props => {
 			[style.active]: props.activeTileId === props.id ? true : false,
 			[style.wrong]: props.isWrong,
 			[style.good]: props.isGood
-		})} key={props.id} onClick={() => !props.lock ? props.tileClickHandler(event, props.id) : null}>
+		})} key={props.id} onClick={event => !props.lock ? props.tileClickHandler(event, props.id) : null}>
 			{props.num}
 		</div>
 	);
